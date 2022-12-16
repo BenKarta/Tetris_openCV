@@ -1,9 +1,8 @@
 package com.example.myfirstapp
 
-import android.content.Intent
+
 import android.os.Bundle
 import android.os.Handler
-import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.game.*
@@ -37,17 +36,10 @@ class Game : AppCompatActivity() {
             B11.text="0";B12.text="0";B13.text="0";B14.text="0";B15.text="0";B16.text="0";B17.text="0";B18.text="0";B19.text="0";B20.text="0";
         }
         if(B21.text == "0"&&B22.text == "0"&&B23.text == "0"&&B24.text == "0"&&B25.text == "0"&&B26.text == "0"&&B27.text == "0"&&B28.text == "0"&&B29.text == "0"&&B30.text == "0"){
-            B21.setBackgroundResource(R.drawable.gray);
-            B22.setBackgroundResource(R.drawable.gray);
-            B23.setBackgroundResource(R.drawable.gray);
-            B24.setBackgroundResource(R.drawable.gray);
-            B25.setBackgroundResource(R.drawable.gray);
-            B26.setBackgroundResource(R.drawable.gray);
-            B27.setBackgroundResource(R.drawable.gray);
-            B28.setBackgroundResource(R.drawable.gray);
-            B29.setBackgroundResource(R.drawable.gray);
-            B30.setBackgroundResource(R.drawable.gray);
-            ;B21.text="0";B22.text="0";B23.text="0";B24.text="0";B25.text="0";B26.text="0";B27.text="0";B28.text="0";B29.text="0";B30.text="0";
+            B21.setBackgroundResource(R.drawable.gray);B22.setBackgroundResource(R.drawable.gray);B23.setBackgroundResource(R.drawable.gray);B24.setBackgroundResource(R.drawable.gray);
+            B25.setBackgroundResource(R.drawable.gray);B26.setBackgroundResource(R.drawable.gray);B27.setBackgroundResource(R.drawable.gray);B28.setBackgroundResource(R.drawable.gray);
+            B29.setBackgroundResource(R.drawable.gray);B30.setBackgroundResource(R.drawable.gray);
+            B21.text="0";B22.text="0";B23.text="0";B24.text="0";B25.text="0";B26.text="0";B27.text="0";B28.text="0";B29.text="0";B30.text="0";
         }
         if(B31.text == "0"&&B32.text == "0"&&B33.text == "0"&&B34.text == "0"&&B35.text == "0"&&B36.text == "0"&&B37.text == "0"&&B38.text == "0"&&B39.text == "0"&&B40.text == "0"){
             B31.setBackgroundResource(R.drawable.gray);
@@ -202,20 +194,343 @@ class Game : AppCompatActivity() {
             B141.text="0";B142.text="0";B143.text="0";B144.text="0";B145.text="0";B146.text="0";B147.text="0";B148.text="0";B149.text="0";B150.text="0";
         }
         Handler().postDelayed({
-            if(lines==15){}
-            if(lines==14){}
-            if(lines==13){}
-            if(lines==12){}
-            if(lines==11){}
-            if(lines==10){}
-            if(lines==9){}
-            if(lines==8){}
-            if(lines==7){}
-            if(lines==6){}
-            if(lines==5){}
-            if(lines==4){if(B31.text==""&&B32.text==""&&B33.text==""&&B34.text==""&&B35.text==""&&B36.text==""&&B37.text==""&&B38.text==""&&B39.text==""&&B40.text==""){
+            if(lines==15){
+                if(B111.text==""&&B112.text==""&&B113.text==""&&B114.text==""&&B115.text==""&&B116.text==""&&B117.text==""&&B118.text==""&&B119.text==""&&B120.text==""){
+                    B111.text=B101.text;B112.text=B102.text;B113.text=B103.text;B114.text=B104.text;B115.text=B105.text;B116.text=B106.text;B117.text=B107.text;B118.text=B108.text;B119.text=B109.text;B120.text=B110.text;
+                    B111.background=B101.background;B112.background=B102.background;B113.background=B103.background;B114.background=B104.background;B115.background=B105.background;B116.background=B106.background;B117.background=B107.background;B118.background=B108.background;B119.background=B109.background;B120.background=B110.background;
+                    B101.setBackgroundResource(R.drawable.gray);B102.setBackgroundResource(R.drawable.gray);B103.setBackgroundResource(R.drawable.gray);B104.setBackgroundResource(R.drawable.gray);B105.setBackgroundResource(R.drawable.gray);B106.setBackgroundResource(R.drawable.gray);B107.setBackgroundResource(R.drawable.gray);B108.setBackgroundResource(R.drawable.gray);B109.setBackgroundResource(R.drawable.gray);B110.setBackgroundResource(R.drawable.gray);
+                    B101.text="";B102.text="";B103.text="";B104.text="";B105.text="";B106.text="";B107.text="";B108.text="";B109.text="";B110.text="";
+                }
+                if(B121.text==""&&B122.text==""&&B123.text==""&&B124.text==""&&B125.text==""&&B126.text==""&&B127.text==""&&B128.text==""&&B129.text==""&&B130.text==""){
+                    B121.text=B111.text;B122.text=B112.text;B123.text=B113.text;B124.text=B114.text;B125.text=B115.text;B126.text=B116.text;B127.text=B117.text;B128.text=B118.text;B129.text=B119.text;B130.text=B120.text;
+                    B121.background=B111.background;B122.background=B112.background;B123.background=B113.background;B124.background=B114.background;B125.background=B115.background;B126.background=B116.background;B127.background=B117.background;B128.background=B118.background;B129.background=B119.background;B130.background=B120.background;
+                    B111.setBackgroundResource(R.drawable.gray);B112.setBackgroundResource(R.drawable.gray);B113.setBackgroundResource(R.drawable.gray);B114.setBackgroundResource(R.drawable.gray);B115.setBackgroundResource(R.drawable.gray);B116.setBackgroundResource(R.drawable.gray);B117.setBackgroundResource(R.drawable.gray);B118.setBackgroundResource(R.drawable.gray);B119.setBackgroundResource(R.drawable.gray);B120.setBackgroundResource(R.drawable.gray);
+                    B111.text="";B112.text="";B113.text="";B114.text="";B115.text="";B116.text="";B117.text="";B118.text="";B119.text="";B120.text="";
 
-            }}
+
+                }
+                if(B131.text==""&&B132.text==""&&B133.text==""&&B134.text==""&&B135.text==""&&B136.text==""&&B137.text==""&&B138.text==""&&B139.text==""&&B140.text==""){
+                    B131.text=B121.text;B132.text=B122.text;B133.text=B123.text;B134.text=B124.text;B135.text=B125.text;B136.text=B126.text;B137.text=B127.text;B138.text=B128.text;B139.text=B129.text;B140.text=B130.text;
+                    B131.background=B121.background;B132.background=B122.background;B133.background=B123.background;B134.background=B124.background;B135.background=B125.background;B136.background=B126.background;B137.background=B127.background;B138.background=B128.background;B139.background=B129.background;B140.background=B130.background;
+                    B121.setBackgroundResource(R.drawable.gray);B122.setBackgroundResource(R.drawable.gray);B123.setBackgroundResource(R.drawable.gray);B124.setBackgroundResource(R.drawable.gray);B125.setBackgroundResource(R.drawable.gray);B126.setBackgroundResource(R.drawable.gray);B127.setBackgroundResource(R.drawable.gray);B128.setBackgroundResource(R.drawable.gray);B129.setBackgroundResource(R.drawable.gray);B130.setBackgroundResource(R.drawable.gray);
+                    B121.text="";B122.text="";B123.text="";B124.text="";B125.text="";B126.text="";B127.text="";B128.text="";B129.text="";B130.text="";
+                }
+                if(B141.text==""&&B142.text==""&&B143.text==""&&B144.text==""&&B145.text==""&&B146.text==""&&B147.text==""&&B148.text==""&&B149.text==""&&B150.text==""){
+                B141.text=B131.text;B142.text=B132.text;B143.text=B133.text;B144.text=B134.text;B145.text=B135.text;B146.text=B136.text;B147.text=B137.text;B148.text=B138.text;B149.text=B139.text;B150.text=B140.text;
+                B141.background=B131.background;B142.background=B132.background;B143.background=B133.background;B144.background=B134.background;B145.background=B135.background;B146.background=B136.background;B147.background=B137.background;B148.background=B138.background;B149.background=B139.background;B150.background=B140.background;
+                B131.setBackgroundResource(R.drawable.gray);B132.setBackgroundResource(R.drawable.gray);B133.setBackgroundResource(R.drawable.gray);B134.setBackgroundResource(R.drawable.gray);B135.setBackgroundResource(R.drawable.gray);B136.setBackgroundResource(R.drawable.gray);B137.setBackgroundResource(R.drawable.gray);B138.setBackgroundResource(R.drawable.gray);B139.setBackgroundResource(R.drawable.gray);B140.setBackgroundResource(R.drawable.gray);
+                B131.text="";B132.text="";B133.text="";B134.text="";B135.text="";B136.text="";B137.text="";B138.text="";B139.text="";B140.text="";
+            };lines=14}
+            if(lines==14){
+                if(B101.text==""&&B102.text==""&&B103.text==""&&B104.text==""&&B105.text==""&&B106.text==""&&B107.text==""&&B108.text==""&&B109.text==""&&B110.text=="") {
+                    B101.text = B91.text;B102.text = B92.text;B103.text = B93.text;B104.text =
+                        B94.text;B105.text = B95.text;B106.text = B96.text;B107.text =
+                        B97.text;B108.text = B98.text;B109.text = B99.text;B110.text = B100.text;
+                    B101.background = B91.background;B102.background =
+                        B92.background;B103.background = B93.background;B104.background =
+                        B94.background;B105.background = B95.background;B106.background =
+                        B96.background;B107.background = B97.background;B108.background =
+                        B98.background;B109.background = B99.background;B110.background =
+                        B100.background;
+                    B91.setBackgroundResource(R.drawable.gray);B92.setBackgroundResource(R.drawable.gray);B93.setBackgroundResource(
+                        R.drawable.gray
+                    );B94.setBackgroundResource(R.drawable.gray);B95.setBackgroundResource(R.drawable.gray);B96.setBackgroundResource(
+                        R.drawable.gray
+                    );B97.setBackgroundResource(R.drawable.gray);B98.setBackgroundResource(R.drawable.gray);B99.setBackgroundResource(
+                        R.drawable.gray
+                    );B100.setBackgroundResource(R.drawable.gray);
+                    B91.text = "";B92.text = "";B93.text = "";B94.text = "";B95.text = "";B96.text =
+                        "";B97.text = "";B98.text = "";B99.text = "";B100.text = "";
+                }
+                if(B111.text==""&&B112.text==""&&B113.text==""&&B114.text==""&&B115.text==""&&B116.text==""&&B117.text==""&&B118.text==""&&B119.text==""&&B120.text==""){
+                    B111.text=B101.text;B112.text=B102.text;B113.text=B103.text;B114.text=B104.text;B115.text=B105.text;B116.text=B106.text;B117.text=B107.text;B118.text=B108.text;B119.text=B109.text;B120.text=B110.text;
+                    B111.background=B101.background;B112.background=B102.background;B113.background=B103.background;B114.background=B104.background;B115.background=B105.background;B116.background=B106.background;B117.background=B107.background;B118.background=B108.background;B119.background=B109.background;B120.background=B110.background;
+                    B101.setBackgroundResource(R.drawable.gray);B102.setBackgroundResource(R.drawable.gray);B103.setBackgroundResource(R.drawable.gray);B104.setBackgroundResource(R.drawable.gray);B105.setBackgroundResource(R.drawable.gray);B106.setBackgroundResource(R.drawable.gray);B107.setBackgroundResource(R.drawable.gray);B108.setBackgroundResource(R.drawable.gray);B109.setBackgroundResource(R.drawable.gray);B110.setBackgroundResource(R.drawable.gray);
+                    B101.text="";B102.text="";B103.text="";B104.text="";B105.text="";B106.text="";B107.text="";B108.text="";B109.text="";B110.text="";
+                }
+                if(B121.text==""&&B122.text==""&&B123.text==""&&B124.text==""&&B125.text==""&&B126.text==""&&B127.text==""&&B128.text==""&&B129.text==""&&B130.text==""){
+                    B121.text=B111.text;B122.text=B112.text;B123.text=B113.text;B124.text=B114.text;B125.text=B115.text;B126.text=B116.text;B127.text=B117.text;B128.text=B118.text;B129.text=B119.text;B130.text=B120.text;
+                    B121.background=B111.background;B122.background=B112.background;B123.background=B113.background;B124.background=B114.background;B125.background=B115.background;B126.background=B116.background;B127.background=B117.background;B128.background=B118.background;B129.background=B119.background;B130.background=B120.background;
+                    B111.setBackgroundResource(R.drawable.gray);B112.setBackgroundResource(R.drawable.gray);B113.setBackgroundResource(R.drawable.gray);B114.setBackgroundResource(R.drawable.gray);B115.setBackgroundResource(R.drawable.gray);B116.setBackgroundResource(R.drawable.gray);B117.setBackgroundResource(R.drawable.gray);B118.setBackgroundResource(R.drawable.gray);B119.setBackgroundResource(R.drawable.gray);B120.setBackgroundResource(R.drawable.gray);
+                    B111.text="";B112.text="";B113.text="";B114.text="";B115.text="";B116.text="";B117.text="";B118.text="";B119.text="";B120.text="";
+
+
+                }
+                if(B131.text==""&&B132.text==""&&B133.text==""&&B134.text==""&&B135.text==""&&B136.text==""&&B137.text==""&&B138.text==""&&B139.text==""&&B140.text==""){
+                    B131.text=B121.text;B132.text=B122.text;B133.text=B123.text;B134.text=B124.text;B135.text=B125.text;B136.text=B126.text;B137.text=B127.text;B138.text=B128.text;B139.text=B129.text;B140.text=B130.text;
+                    B131.background=B121.background;B132.background=B122.background;B133.background=B123.background;B134.background=B124.background;B135.background=B125.background;B136.background=B126.background;B137.background=B127.background;B138.background=B128.background;B139.background=B129.background;B140.background=B130.background;
+                    B121.setBackgroundResource(R.drawable.gray);B122.setBackgroundResource(R.drawable.gray);B123.setBackgroundResource(R.drawable.gray);B124.setBackgroundResource(R.drawable.gray);B125.setBackgroundResource(R.drawable.gray);B126.setBackgroundResource(R.drawable.gray);B127.setBackgroundResource(R.drawable.gray);B128.setBackgroundResource(R.drawable.gray);B129.setBackgroundResource(R.drawable.gray);B130.setBackgroundResource(R.drawable.gray);
+                    B121.text="";B122.text="";B123.text="";B124.text="";B125.text="";B126.text="";B127.text="";B128.text="";B129.text="";B130.text="";
+            };lines=13}
+            if(lines==13){
+                if(B91.text==""&&B92.text==""&&B93.text==""&&B94.text==""&&B95.text==""&&B96.text==""&&B97.text==""&&B98.text==""&&B99.text==""&&B100.text==""){
+                    B91.text=B81.text;B92.text=B82.text;B93.text=B83.text;B94.text=B84.text;B95.text=B85.text;B96.text=B86.text;B97.text=B87.text;B98.text=B88.text;B99.text=B89.text;B100.text=B90.text;
+                    B91.background=B81.background;B92.background=B82.background;B93.background=B83.background;B94.background=B84.background;B95.background=B85.background;B96.background=B86.background;B97.background=B87.background;B98.background=B88.background;B99.background=B89.background;B100.background=B90.background;
+                    B81.setBackgroundResource(R.drawable.gray);B82.setBackgroundResource(R.drawable.gray);B83.setBackgroundResource(R.drawable.gray);B84.setBackgroundResource(R.drawable.gray);B85.setBackgroundResource(R.drawable.gray);B86.setBackgroundResource(R.drawable.gray);B87.setBackgroundResource(R.drawable.gray);B88.setBackgroundResource(R.drawable.gray);B89.setBackgroundResource(R.drawable.gray);B90.setBackgroundResource(R.drawable.gray);
+                    B81.text="";B82.text="";B83.text="";B84.text="";B85.text="";B86.text="";B87.text="";B88.text="";B89.text="";B90.text="";
+                }
+                if(B101.text==""&&B102.text==""&&B103.text==""&&B104.text==""&&B105.text==""&&B106.text==""&&B107.text==""&&B108.text==""&&B109.text==""&&B110.text=="") {
+                    B101.text = B91.text;B102.text = B92.text;B103.text = B93.text;B104.text =
+                        B94.text;B105.text = B95.text;B106.text = B96.text;B107.text =
+                        B97.text;B108.text = B98.text;B109.text = B99.text;B110.text = B100.text;
+                    B101.background = B91.background;B102.background =
+                        B92.background;B103.background = B93.background;B104.background =
+                        B94.background;B105.background = B95.background;B106.background =
+                        B96.background;B107.background = B97.background;B108.background =
+                        B98.background;B109.background = B99.background;B110.background =
+                        B100.background;
+                    B91.setBackgroundResource(R.drawable.gray);B92.setBackgroundResource(R.drawable.gray);B93.setBackgroundResource(
+                        R.drawable.gray
+                    );B94.setBackgroundResource(R.drawable.gray);B95.setBackgroundResource(R.drawable.gray);B96.setBackgroundResource(
+                        R.drawable.gray
+                    );B97.setBackgroundResource(R.drawable.gray);B98.setBackgroundResource(R.drawable.gray);B99.setBackgroundResource(
+                        R.drawable.gray
+                    );B100.setBackgroundResource(R.drawable.gray);
+                    B91.text = "";B92.text = "";B93.text = "";B94.text = "";B95.text = "";B96.text =
+                        "";B97.text = "";B98.text = "";B99.text = "";B100.text = "";
+                }
+                    if(B111.text==""&&B112.text==""&&B113.text==""&&B114.text==""&&B115.text==""&&B116.text==""&&B117.text==""&&B118.text==""&&B119.text==""&&B120.text==""){
+                        B111.text=B101.text;B112.text=B102.text;B113.text=B103.text;B114.text=B104.text;B115.text=B105.text;B116.text=B106.text;B117.text=B107.text;B118.text=B108.text;B119.text=B109.text;B120.text=B110.text;
+                        B111.background=B101.background;B112.background=B102.background;B113.background=B103.background;B114.background=B104.background;B115.background=B105.background;B116.background=B106.background;B117.background=B107.background;B118.background=B108.background;B119.background=B109.background;B120.background=B110.background;
+                        B101.setBackgroundResource(R.drawable.gray);B102.setBackgroundResource(R.drawable.gray);B103.setBackgroundResource(R.drawable.gray);B104.setBackgroundResource(R.drawable.gray);B105.setBackgroundResource(R.drawable.gray);B106.setBackgroundResource(R.drawable.gray);B107.setBackgroundResource(R.drawable.gray);B108.setBackgroundResource(R.drawable.gray);B109.setBackgroundResource(R.drawable.gray);B110.setBackgroundResource(R.drawable.gray);
+                        B101.text="";B102.text="";B103.text="";B104.text="";B105.text="";B106.text="";B107.text="";B108.text="";B109.text="";B110.text="";
+                    }
+                if(B121.text==""&&B122.text==""&&B123.text==""&&B124.text==""&&B125.text==""&&B126.text==""&&B127.text==""&&B128.text==""&&B129.text==""&&B130.text==""){
+                    B121.text=B111.text;B122.text=B112.text;B123.text=B113.text;B124.text=B114.text;B125.text=B115.text;B126.text=B116.text;B127.text=B117.text;B128.text=B118.text;B129.text=B119.text;B130.text=B120.text;
+                    B121.background=B111.background;B122.background=B112.background;B123.background=B113.background;B124.background=B114.background;B125.background=B115.background;B126.background=B116.background;B127.background=B117.background;B128.background=B118.background;B129.background=B119.background;B130.background=B120.background;
+                    B111.setBackgroundResource(R.drawable.gray);B112.setBackgroundResource(R.drawable.gray);B113.setBackgroundResource(R.drawable.gray);B114.setBackgroundResource(R.drawable.gray);B115.setBackgroundResource(R.drawable.gray);B116.setBackgroundResource(R.drawable.gray);B117.setBackgroundResource(R.drawable.gray);B118.setBackgroundResource(R.drawable.gray);B119.setBackgroundResource(R.drawable.gray);B120.setBackgroundResource(R.drawable.gray);
+                    B111.text="";B112.text="";B113.text="";B114.text="";B115.text="";B116.text="";B117.text="";B118.text="";B119.text="";B120.text="";
+
+
+            } ;lines=12}
+            if(lines==12){
+                if(B81.text==""&&B82.text==""&&B83.text==""&&B84.text==""&&B85.text==""&&B86.text==""&&B87.text==""&&B88.text==""&&B89.text==""&&B90.text==""){
+                    B81.text=B71.text;B82.text=B72.text;B83.text=B73.text;B84.text=B74.text;B85.text=B75.text;B86.text=B76.text;B87.text=B77.text;B88.text=B78.text;B89.text=B79.text;B90.text=B80.text;
+                    B81.background=B71.background;B82.background=B72.background;B83.background=B73.background;B84.background=B74.background;B85.background=B75.background;B86.background=B76.background;B87.background=B77.background;B88.background=B78.background;B89.background=B79.background;B90.background=B80.background;
+                    B71.setBackgroundResource(R.drawable.gray);B72.setBackgroundResource(R.drawable.gray);B73.setBackgroundResource(R.drawable.gray);B74.setBackgroundResource(R.drawable.gray);B75.setBackgroundResource(R.drawable.gray);B76.setBackgroundResource(R.drawable.gray);B77.setBackgroundResource(R.drawable.gray);B78.setBackgroundResource(R.drawable.gray);B79.setBackgroundResource(R.drawable.gray);B80.setBackgroundResource(R.drawable.gray);
+                    B71.text="";B72.text="";B73.text="";B74.text="";B75.text="";B76.text="";B77.text="";B78.text="";B79.text="";B80.text=""
+                }
+                if(B91.text==""&&B92.text==""&&B93.text==""&&B94.text==""&&B95.text==""&&B96.text==""&&B97.text==""&&B98.text==""&&B99.text==""&&B100.text==""){
+                    B91.text=B81.text;B92.text=B82.text;B93.text=B83.text;B94.text=B84.text;B95.text=B85.text;B96.text=B86.text;B97.text=B87.text;B98.text=B88.text;B99.text=B89.text;B100.text=B90.text;
+                    B91.background=B81.background;B92.background=B82.background;B93.background=B83.background;B94.background=B84.background;B95.background=B85.background;B96.background=B86.background;B97.background=B87.background;B98.background=B88.background;B99.background=B89.background;B100.background=B90.background;
+                    B81.setBackgroundResource(R.drawable.gray);B82.setBackgroundResource(R.drawable.gray);B83.setBackgroundResource(R.drawable.gray);B84.setBackgroundResource(R.drawable.gray);B85.setBackgroundResource(R.drawable.gray);B86.setBackgroundResource(R.drawable.gray);B87.setBackgroundResource(R.drawable.gray);B88.setBackgroundResource(R.drawable.gray);B89.setBackgroundResource(R.drawable.gray);B90.setBackgroundResource(R.drawable.gray);
+                    B81.text="";B82.text="";B83.text="";B84.text="";B85.text="";B86.text="";B87.text="";B88.text="";B89.text="";B90.text="";
+                }
+                if(B101.text==""&&B102.text==""&&B103.text==""&&B104.text==""&&B105.text==""&&B106.text==""&&B107.text==""&&B108.text==""&&B109.text==""&&B110.text=="") {
+                    B101.text = B91.text;B102.text = B92.text;B103.text = B93.text;B104.text =
+                        B94.text;B105.text = B95.text;B106.text = B96.text;B107.text =
+                        B97.text;B108.text = B98.text;B109.text = B99.text;B110.text = B100.text;
+                    B101.background = B91.background;B102.background =
+                        B92.background;B103.background = B93.background;B104.background =
+                        B94.background;B105.background = B95.background;B106.background =
+                        B96.background;B107.background = B97.background;B108.background =
+                        B98.background;B109.background = B99.background;B110.background =
+                        B100.background;
+                    B91.setBackgroundResource(R.drawable.gray);B92.setBackgroundResource(R.drawable.gray);B93.setBackgroundResource(
+                        R.drawable.gray
+                    );B94.setBackgroundResource(R.drawable.gray);B95.setBackgroundResource(R.drawable.gray);B96.setBackgroundResource(
+                        R.drawable.gray
+                    );B97.setBackgroundResource(R.drawable.gray);B98.setBackgroundResource(R.drawable.gray);B99.setBackgroundResource(
+                        R.drawable.gray
+                    );B100.setBackgroundResource(R.drawable.gray);
+                    B91.text = "";B92.text = "";B93.text = "";B94.text = "";B95.text = "";B96.text =
+                        "";B97.text = "";B98.text = "";B99.text = "";B100.text = "";
+                }
+                    if(B111.text==""&&B112.text==""&&B113.text==""&&B114.text==""&&B115.text==""&&B116.text==""&&B117.text==""&&B118.text==""&&B119.text==""&&B120.text==""){
+                B111.text=B101.text;B112.text=B102.text;B113.text=B103.text;B114.text=B104.text;B115.text=B105.text;B116.text=B106.text;B117.text=B107.text;B118.text=B108.text;B119.text=B109.text;B120.text=B110.text;
+                B111.background=B101.background;B112.background=B102.background;B113.background=B103.background;B114.background=B104.background;B115.background=B105.background;B116.background=B106.background;B117.background=B107.background;B118.background=B108.background;B119.background=B109.background;B120.background=B110.background;
+                B101.setBackgroundResource(R.drawable.gray);B102.setBackgroundResource(R.drawable.gray);B103.setBackgroundResource(R.drawable.gray);B104.setBackgroundResource(R.drawable.gray);B105.setBackgroundResource(R.drawable.gray);B106.setBackgroundResource(R.drawable.gray);B107.setBackgroundResource(R.drawable.gray);B108.setBackgroundResource(R.drawable.gray);B109.setBackgroundResource(R.drawable.gray);B110.setBackgroundResource(R.drawable.gray);
+                B101.text="";B102.text="";B103.text="";B104.text="";B105.text="";B106.text="";B107.text="";B108.text="";B109.text="";B110.text="";
+            };lines=11}
+            if(lines==11){
+                if(B71.text==""&&B72.text==""&&B73.text==""&&B74.text==""&&B75.text==""&&B76.text==""&&B77.text==""&&B78.text==""&&B79.text==""&&B80.text==""){
+                    B71.text=B61.text;B72.text=B62.text;B73.text=B63.text;B74.text=B64.text;B75.text=B65.text;
+                    B76.text=B66.text;B77.text=B67.text;B78.text=B68.text;B79.text=B69.text;B80.text=B70.text;
+                    B71.background=B61.background;B72.background=B62.background;B73.background=B63.background;B74.background=B64.background;B75.background=B65.background;
+                    B76.background=B66.background;B77.background=B67.background;B78.background=B68.background;B79.background=B69.background;B80.background=B70.background;
+                    B61.setBackgroundResource(R.drawable.gray);B62.setBackgroundResource(R.drawable.gray);B63.setBackgroundResource(R.drawable.gray);B64.setBackgroundResource(R.drawable.gray);B65.setBackgroundResource(R.drawable.gray);
+                    B66.setBackgroundResource(R.drawable.gray);B67.setBackgroundResource(R.drawable.gray);B68.setBackgroundResource(R.drawable.gray);B69.setBackgroundResource(R.drawable.gray);B70.setBackgroundResource(R.drawable.gray);
+                    B61.text="";B62.text="";B63.text="";B64.text="";B65.text="";B66.text="";B67.text="";B68.text="";B69.text="";B70.text="";
+                }
+                if(B81.text==""&&B82.text==""&&B83.text==""&&B84.text==""&&B85.text==""&&B86.text==""&&B87.text==""&&B88.text==""&&B89.text==""&&B90.text==""){
+                    B81.text=B71.text;B82.text=B72.text;B83.text=B73.text;B84.text=B74.text;B85.text=B75.text;B86.text=B76.text;B87.text=B77.text;B88.text=B78.text;B89.text=B79.text;B90.text=B80.text;
+                    B81.background=B71.background;B82.background=B72.background;B83.background=B73.background;B84.background=B74.background;B85.background=B75.background;B86.background=B76.background;B87.background=B77.background;B88.background=B78.background;B89.background=B79.background;B90.background=B80.background;
+                    B71.setBackgroundResource(R.drawable.gray);B72.setBackgroundResource(R.drawable.gray);B73.setBackgroundResource(R.drawable.gray);B74.setBackgroundResource(R.drawable.gray);B75.setBackgroundResource(R.drawable.gray);B76.setBackgroundResource(R.drawable.gray);B77.setBackgroundResource(R.drawable.gray);B78.setBackgroundResource(R.drawable.gray);B79.setBackgroundResource(R.drawable.gray);B80.setBackgroundResource(R.drawable.gray);
+                    B71.text="";B72.text="";B73.text="";B74.text="";B75.text="";B76.text="";B77.text="";B78.text="";B79.text="";B80.text=""
+                }
+                if(B91.text==""&&B92.text==""&&B93.text==""&&B94.text==""&&B95.text==""&&B96.text==""&&B97.text==""&&B98.text==""&&B99.text==""&&B100.text==""){
+                    B91.text=B81.text;B92.text=B82.text;B93.text=B83.text;B94.text=B84.text;B95.text=B85.text;B96.text=B86.text;B97.text=B87.text;B98.text=B88.text;B99.text=B89.text;B100.text=B90.text;
+                    B91.background=B81.background;B92.background=B82.background;B93.background=B83.background;B94.background=B84.background;B95.background=B85.background;B96.background=B86.background;B97.background=B87.background;B98.background=B88.background;B99.background=B89.background;B100.background=B90.background;
+                    B81.setBackgroundResource(R.drawable.gray);B82.setBackgroundResource(R.drawable.gray);B83.setBackgroundResource(R.drawable.gray);B84.setBackgroundResource(R.drawable.gray);B85.setBackgroundResource(R.drawable.gray);B86.setBackgroundResource(R.drawable.gray);B87.setBackgroundResource(R.drawable.gray);B88.setBackgroundResource(R.drawable.gray);B89.setBackgroundResource(R.drawable.gray);B90.setBackgroundResource(R.drawable.gray);
+                    B81.text="";B82.text="";B83.text="";B84.text="";B85.text="";B86.text="";B87.text="";B88.text="";B89.text="";B90.text="";
+                }
+                if(B101.text==""&&B102.text==""&&B103.text==""&&B104.text==""&&B105.text==""&&B106.text==""&&B107.text==""&&B108.text==""&&B109.text==""&&B110.text==""){
+                B101.text=B91.text;B102.text=B92.text;B103.text=B93.text;B104.text=B94.text;B105.text=B95.text;B106.text=B96.text;B107.text=B97.text;B108.text=B98.text;B109.text=B99.text;B110.text=B100.text;
+                B101.background=B91.background;B102.background=B92.background;B103.background=B93.background;B104.background=B94.background;B105.background=B95.background;B106.background=B96.background;B107.background=B97.background;B108.background=B98.background;B109.background=B99.background;B110.background=B100.background;
+                B91.setBackgroundResource(R.drawable.gray);B92.setBackgroundResource(R.drawable.gray);B93.setBackgroundResource(R.drawable.gray);B94.setBackgroundResource(R.drawable.gray);B95.setBackgroundResource(R.drawable.gray);B96.setBackgroundResource(R.drawable.gray);B97.setBackgroundResource(R.drawable.gray);B98.setBackgroundResource(R.drawable.gray);B99.setBackgroundResource(R.drawable.gray);B100.setBackgroundResource(R.drawable.gray);
+                B91.text="";B92.text="";B93.text="";B94.text="";B95.text="";B96.text="";B97.text="";B98.text="";B99.text="";B100.text="";
+            };lines=10}
+            if(lines==10){
+                if(B61.text==""&&B62.text==""&&B63.text==""&&B64.text==""&&B65.text==""&&B66.text==""&&B67.text==""&&B68.text==""&&B69.text==""&&B70.text==""){
+                    B61.text=B51.text;B62.text=B52.text;B63.text=B53.text;B64.text=B54.text;B65.text=B55.text;B66.text=B56.text;B67.text=B57.text;B68.text=B58.text;B69.text=B59.text;B70.text=B60.text;
+                    B61.background=B51.background;B62.background=B52.background;B63.background=B53.background;B64.background=B54.background;B65.background=B55.background;B66.background=B56.background;B67.background=B57.background;B68.background=B58.background;B69.background=B59.background;B70.background=B60.background;
+                    B51.setBackgroundResource(R.drawable.gray);B52.setBackgroundResource(R.drawable.gray);B53.setBackgroundResource(R.drawable.gray);B54.setBackgroundResource(R.drawable.gray);B55.setBackgroundResource(R.drawable.gray);B56.setBackgroundResource(R.drawable.gray);B57.setBackgroundResource(R.drawable.gray);B58.setBackgroundResource(R.drawable.gray);B59.setBackgroundResource(R.drawable.gray);B60.setBackgroundResource(R.drawable.gray);
+                    B51.text="";B52.text="";B53.text="";B54.text="";B55.text="";B56.text="";B57.text="";B58.text="";B59.text="";B60.text="";
+                }
+                if(B71.text==""&&B72.text==""&&B73.text==""&&B74.text==""&&B75.text==""&&B76.text==""&&B77.text==""&&B78.text==""&&B79.text==""&&B80.text==""){
+                    B71.text=B61.text;B72.text=B62.text;B73.text=B63.text;B74.text=B64.text;B75.text=B65.text;
+                    B76.text=B66.text;B77.text=B67.text;B78.text=B68.text;B79.text=B69.text;B80.text=B70.text;
+                    B71.background=B61.background;B72.background=B62.background;B73.background=B63.background;B74.background=B64.background;B75.background=B65.background;
+                    B76.background=B66.background;B77.background=B67.background;B78.background=B68.background;B79.background=B69.background;B80.background=B70.background;
+                    B61.setBackgroundResource(R.drawable.gray);B62.setBackgroundResource(R.drawable.gray);B63.setBackgroundResource(R.drawable.gray);B64.setBackgroundResource(R.drawable.gray);B65.setBackgroundResource(R.drawable.gray);
+                    B66.setBackgroundResource(R.drawable.gray);B67.setBackgroundResource(R.drawable.gray);B68.setBackgroundResource(R.drawable.gray);B69.setBackgroundResource(R.drawable.gray);B70.setBackgroundResource(R.drawable.gray);
+                    B61.text="";B62.text="";B63.text="";B64.text="";B65.text="";B66.text="";B67.text="";B68.text="";B69.text="";B70.text="";
+                }
+                if(B81.text==""&&B82.text==""&&B83.text==""&&B84.text==""&&B85.text==""&&B86.text==""&&B87.text==""&&B88.text==""&&B89.text==""&&B90.text==""){
+                    B81.text=B71.text;B82.text=B72.text;B83.text=B73.text;B84.text=B74.text;B85.text=B75.text;B86.text=B76.text;B87.text=B77.text;B88.text=B78.text;B89.text=B79.text;B90.text=B80.text;
+                    B81.background=B71.background;B82.background=B72.background;B83.background=B73.background;B84.background=B74.background;B85.background=B75.background;B86.background=B76.background;B87.background=B77.background;B88.background=B78.background;B89.background=B79.background;B90.background=B80.background;
+                    B71.setBackgroundResource(R.drawable.gray);B72.setBackgroundResource(R.drawable.gray);B73.setBackgroundResource(R.drawable.gray);B74.setBackgroundResource(R.drawable.gray);B75.setBackgroundResource(R.drawable.gray);B76.setBackgroundResource(R.drawable.gray);B77.setBackgroundResource(R.drawable.gray);B78.setBackgroundResource(R.drawable.gray);B79.setBackgroundResource(R.drawable.gray);B80.setBackgroundResource(R.drawable.gray);
+                    B71.text="";B72.text="";B73.text="";B74.text="";B75.text="";B76.text="";B77.text="";B78.text="";B79.text="";B80.text=""
+                }
+                if(B91.text==""&&B92.text==""&&B93.text==""&&B94.text==""&&B95.text==""&&B96.text==""&&B97.text==""&&B98.text==""&&B99.text==""&&B100.text==""){
+                B91.text=B81.text;B92.text=B82.text;B93.text=B83.text;B94.text=B84.text;B95.text=B85.text;B96.text=B86.text;B97.text=B87.text;B98.text=B88.text;B99.text=B89.text;B100.text=B90.text;
+                B91.background=B81.background;B92.background=B82.background;B93.background=B83.background;B94.background=B84.background;B95.background=B85.background;B96.background=B86.background;B97.background=B87.background;B98.background=B88.background;B99.background=B89.background;B100.background=B90.background;
+                B81.setBackgroundResource(R.drawable.gray);B82.setBackgroundResource(R.drawable.gray);B83.setBackgroundResource(R.drawable.gray);B84.setBackgroundResource(R.drawable.gray);B85.setBackgroundResource(R.drawable.gray);B86.setBackgroundResource(R.drawable.gray);B87.setBackgroundResource(R.drawable.gray);B88.setBackgroundResource(R.drawable.gray);B89.setBackgroundResource(R.drawable.gray);B90.setBackgroundResource(R.drawable.gray);
+                B81.text="";B82.text="";B83.text="";B84.text="";B85.text="";B86.text="";B87.text="";B88.text="";B89.text="";B90.text="";
+            };lines=9}
+            if(lines==9){
+                if(B51.text==""&&B52.text==""&&B53.text==""&&B54.text==""&&B55.text==""&&B56.text==""&&B57.text==""&&B58.text==""&&B59.text==""&&B60.text==""){
+                    B51.text=B41.text;B52.text=B42.text;B53.text=B43.text;B54.text=B44.text;B55.text=B45.text;B56.text=B46.text;B57.text=B47.text;B58.text=B48.text;B59.text=B49.text;B60.text=B50.text;
+                    B51.background=B41.background;B52.background=B42.background;B53.background=B43.background;B54.background=B44.background;B55.background=B45.background;B56.background=B46.background;B57.background=B47.background;B58.background=B48.background;B59.background=B49.background;B60.background=B50.background;
+                    B41.setBackgroundResource(R.drawable.gray);B42.setBackgroundResource(R.drawable.gray);B43.setBackgroundResource(R.drawable.gray);B44.setBackgroundResource(R.drawable.gray);B45.setBackgroundResource(R.drawable.gray);B46.setBackgroundResource(R.drawable.gray);B47.setBackgroundResource(R.drawable.gray);B48.setBackgroundResource(R.drawable.gray);B49.setBackgroundResource(R.drawable.gray);B50.setBackgroundResource(R.drawable.gray);
+                    B41.text="";B42.text="";B43.text="";B44.text="";B45.text="";B46.text="";B47.text="";B48.text="";B49.text="";B50.text="";
+                }
+                if(B61.text==""&&B62.text==""&&B63.text==""&&B64.text==""&&B65.text==""&&B66.text==""&&B67.text==""&&B68.text==""&&B69.text==""&&B70.text==""){
+                    B61.text=B51.text;B62.text=B52.text;B63.text=B53.text;B64.text=B54.text;B65.text=B55.text;B66.text=B56.text;B67.text=B57.text;B68.text=B58.text;B69.text=B59.text;B70.text=B60.text;
+                    B61.background=B51.background;B62.background=B52.background;B63.background=B53.background;B64.background=B54.background;B65.background=B55.background;B66.background=B56.background;B67.background=B57.background;B68.background=B58.background;B69.background=B59.background;B70.background=B60.background;
+                    B51.setBackgroundResource(R.drawable.gray);B52.setBackgroundResource(R.drawable.gray);B53.setBackgroundResource(R.drawable.gray);B54.setBackgroundResource(R.drawable.gray);B55.setBackgroundResource(R.drawable.gray);B56.setBackgroundResource(R.drawable.gray);B57.setBackgroundResource(R.drawable.gray);B58.setBackgroundResource(R.drawable.gray);B59.setBackgroundResource(R.drawable.gray);B60.setBackgroundResource(R.drawable.gray);
+                    B51.text="";B52.text="";B53.text="";B54.text="";B55.text="";B56.text="";B57.text="";B58.text="";B59.text="";B60.text="";
+                }
+                if(B71.text==""&&B72.text==""&&B73.text==""&&B74.text==""&&B75.text==""&&B76.text==""&&B77.text==""&&B78.text==""&&B79.text==""&&B80.text==""){
+                    B71.text=B61.text;B72.text=B62.text;B73.text=B63.text;B74.text=B64.text;B75.text=B65.text;
+                    B76.text=B66.text;B77.text=B67.text;B78.text=B68.text;B79.text=B69.text;B80.text=B70.text;
+                    B71.background=B61.background;B72.background=B62.background;B73.background=B63.background;B74.background=B64.background;B75.background=B65.background;
+                    B76.background=B66.background;B77.background=B67.background;B78.background=B68.background;B79.background=B69.background;B80.background=B70.background;
+                    B61.setBackgroundResource(R.drawable.gray);B62.setBackgroundResource(R.drawable.gray);B63.setBackgroundResource(R.drawable.gray);B64.setBackgroundResource(R.drawable.gray);B65.setBackgroundResource(R.drawable.gray);
+                    B66.setBackgroundResource(R.drawable.gray);B67.setBackgroundResource(R.drawable.gray);B68.setBackgroundResource(R.drawable.gray);B69.setBackgroundResource(R.drawable.gray);B70.setBackgroundResource(R.drawable.gray);
+                    B61.text="";B62.text="";B63.text="";B64.text="";B65.text="";B66.text="";B67.text="";B68.text="";B69.text="";B70.text="";
+                }
+                if(B81.text==""&&B82.text==""&&B83.text==""&&B84.text==""&&B85.text==""&&B86.text==""&&B87.text==""&&B88.text==""&&B89.text==""&&B90.text==""){
+                B81.text=B71.text;B82.text=B72.text;B83.text=B73.text;B84.text=B74.text;B85.text=B75.text;B86.text=B76.text;B87.text=B77.text;B88.text=B78.text;B89.text=B79.text;B90.text=B80.text;
+                B81.background=B71.background;B82.background=B72.background;B83.background=B73.background;B84.background=B74.background;B85.background=B75.background;B86.background=B76.background;B87.background=B77.background;B88.background=B78.background;B89.background=B79.background;B90.background=B80.background;
+                B71.setBackgroundResource(R.drawable.gray);B72.setBackgroundResource(R.drawable.gray);B73.setBackgroundResource(R.drawable.gray);B74.setBackgroundResource(R.drawable.gray);B75.setBackgroundResource(R.drawable.gray);B76.setBackgroundResource(R.drawable.gray);B77.setBackgroundResource(R.drawable.gray);B78.setBackgroundResource(R.drawable.gray);B79.setBackgroundResource(R.drawable.gray);B80.setBackgroundResource(R.drawable.gray);
+                B71.text="";B72.text="";B73.text="";B74.text="";B75.text="";B76.text="";B77.text="";B78.text="";B79.text="";B80.text=""
+            };lines=8}
+            if(lines==8){
+                if(B41.text==""&&B42.text==""&&B43.text==""&&B44.text==""&&B45.text==""&&B46.text==""&&B47.text==""&&B48.text==""&&B49.text==""&&B50.text==""){
+                    B41.text=B31.text;B42.text=B32.text;B43.text=B33.text;B44.text=B34.text;B45.text=B35.text;B46.text=B36.text;B47.text=B37.text;B48.text=B38.text;B49.text=B39.text;B50.text=B40.text;
+                    B41.background=B31.background;B42.background=B32.background;B43.background=B33.background;B44.background=B34.background;B45.background=B35.background;B46.background=B36.background;B47.background=B37.background;B48.background=B38.background;B49.background=B39.background;B50.background=B40.background;
+                    B31.setBackgroundResource(R.drawable.gray);B32.setBackgroundResource(R.drawable.gray);B33.setBackgroundResource(R.drawable.gray);B34.setBackgroundResource(R.drawable.gray);B35.setBackgroundResource(R.drawable.gray);B36.setBackgroundResource(R.drawable.gray);B37.setBackgroundResource(R.drawable.gray);B38.setBackgroundResource(R.drawable.gray);B39.setBackgroundResource(R.drawable.gray);B40.setBackgroundResource(R.drawable.gray);
+                    B31.text="";B32.text="";B33.text="";B34.text="";B35.text="";B36.text="";B37.text="";B38.text="";B39.text="";B40.text="";
+                }
+                if(B51.text==""&&B52.text==""&&B53.text==""&&B54.text==""&&B55.text==""&&B56.text==""&&B57.text==""&&B58.text==""&&B59.text==""&&B60.text==""){
+                    B51.text=B41.text;B52.text=B42.text;B53.text=B43.text;B54.text=B44.text;B55.text=B45.text;B56.text=B46.text;B57.text=B47.text;B58.text=B48.text;B59.text=B49.text;B60.text=B50.text;
+                    B51.background=B41.background;B52.background=B42.background;B53.background=B43.background;B54.background=B44.background;B55.background=B45.background;B56.background=B46.background;B57.background=B47.background;B58.background=B48.background;B59.background=B49.background;B60.background=B50.background;
+                    B41.setBackgroundResource(R.drawable.gray);B42.setBackgroundResource(R.drawable.gray);B43.setBackgroundResource(R.drawable.gray);B44.setBackgroundResource(R.drawable.gray);B45.setBackgroundResource(R.drawable.gray);B46.setBackgroundResource(R.drawable.gray);B47.setBackgroundResource(R.drawable.gray);B48.setBackgroundResource(R.drawable.gray);B49.setBackgroundResource(R.drawable.gray);B50.setBackgroundResource(R.drawable.gray);
+                    B41.text="";B42.text="";B43.text="";B44.text="";B45.text="";B46.text="";B47.text="";B48.text="";B49.text="";B50.text="";
+                }
+                if(B61.text==""&&B62.text==""&&B63.text==""&&B64.text==""&&B65.text==""&&B66.text==""&&B67.text==""&&B68.text==""&&B69.text==""&&B70.text==""){
+                    B61.text=B51.text;B62.text=B52.text;B63.text=B53.text;B64.text=B54.text;B65.text=B55.text;B66.text=B56.text;B67.text=B57.text;B68.text=B58.text;B69.text=B59.text;B70.text=B60.text;
+                    B61.background=B51.background;B62.background=B52.background;B63.background=B53.background;B64.background=B54.background;B65.background=B55.background;B66.background=B56.background;B67.background=B57.background;B68.background=B58.background;B69.background=B59.background;B70.background=B60.background;
+                    B51.setBackgroundResource(R.drawable.gray);B52.setBackgroundResource(R.drawable.gray);B53.setBackgroundResource(R.drawable.gray);B54.setBackgroundResource(R.drawable.gray);B55.setBackgroundResource(R.drawable.gray);B56.setBackgroundResource(R.drawable.gray);B57.setBackgroundResource(R.drawable.gray);B58.setBackgroundResource(R.drawable.gray);B59.setBackgroundResource(R.drawable.gray);B60.setBackgroundResource(R.drawable.gray);
+                    B51.text="";B52.text="";B53.text="";B54.text="";B55.text="";B56.text="";B57.text="";B58.text="";B59.text="";B60.text="";
+                }
+
+                if(B71.text==""&&B72.text==""&&B73.text==""&&B74.text==""&&B75.text==""&&B76.text==""&&B77.text==""&&B78.text==""&&B79.text==""&&B80.text==""){
+                B71.text=B61.text;B72.text=B62.text;B73.text=B63.text;B74.text=B64.text;B75.text=B65.text;
+                B76.text=B66.text;B77.text=B67.text;B78.text=B68.text;B79.text=B69.text;B80.text=B70.text;
+                B71.background=B61.background;B72.background=B62.background;B73.background=B63.background;B74.background=B64.background;B75.background=B65.background;
+                B76.background=B66.background;B77.background=B67.background;B78.background=B68.background;B79.background=B69.background;B80.background=B70.background;
+                B61.setBackgroundResource(R.drawable.gray);B62.setBackgroundResource(R.drawable.gray);B63.setBackgroundResource(R.drawable.gray);B64.setBackgroundResource(R.drawable.gray);B65.setBackgroundResource(R.drawable.gray);
+                B66.setBackgroundResource(R.drawable.gray);B67.setBackgroundResource(R.drawable.gray);B68.setBackgroundResource(R.drawable.gray);B69.setBackgroundResource(R.drawable.gray);B70.setBackgroundResource(R.drawable.gray);
+                B61.text="";B62.text="";B63.text="";B64.text="";B65.text="";B66.text="";B67.text="";B68.text="";B69.text="";B70.text="";
+            };lines=7}
+            if(lines==7){
+                if(B31.text==""&&B32.text==""&&B33.text==""&&B34.text==""&&B35.text==""&&B36.text==""&&B37.text==""&&B38.text==""&&B39.text==""&&B40.text==""){
+                    B31.text=B21.text;B32.text=B22.text;B33.text=B23.text;B34.text=B24.text;B35.text=B25.text;B36.text=B26.text;B37.text=B27.text;B38.text=B28.text;B39.text=B29.text;B40.text=B30.text;
+                B31.background=B21.background;B32.background=B22.background;B33.background=B23.background;B34.background=B24.background;B35.background=B25.background;
+                    B36.background=B26.background;B37.background=B27.background;B38.background=B28.background;B39.background=B29.background;B40.background=B30.background;
+                B21.setBackgroundResource(R.drawable.gray);B22.setBackgroundResource(R.drawable.gray);B23.setBackgroundResource(R.drawable.gray);B24.setBackgroundResource(R.drawable.gray);B25.setBackgroundResource(R.drawable.gray);B26.setBackgroundResource(R.drawable.gray);B27.setBackgroundResource(R.drawable.gray);B28.setBackgroundResource(R.drawable.gray);B29.setBackgroundResource(R.drawable.gray);B30.setBackgroundResource(R.drawable.gray);
+                B21.text="";B22.text="";B23.text="";B24.text="";B25.text="";B26.text="";B27.text="";B28.text="";B29.text="";B30.text="";
+                }
+                if(B41.text==""&&B42.text==""&&B43.text==""&&B44.text==""&&B45.text==""&&B46.text==""&&B47.text==""&&B48.text==""&&B49.text==""&&B50.text==""){
+                    B41.text=B31.text;B42.text=B32.text;B43.text=B33.text;B44.text=B34.text;B45.text=B35.text;B46.text=B36.text;B47.text=B37.text;B48.text=B38.text;B49.text=B39.text;B50.text=B40.text;
+                    B41.background=B31.background;B42.background=B32.background;B43.background=B33.background;B44.background=B34.background;B45.background=B35.background;
+                    B46.background=B36.background;B47.background=B37.background;B48.background=B38.background;B49.background=B39.background;B50.background=B40.background;
+                    B31.setBackgroundResource(R.drawable.gray);B32.setBackgroundResource(R.drawable.gray);B33.setBackgroundResource(R.drawable.gray);B34.setBackgroundResource(R.drawable.gray);B35.setBackgroundResource(R.drawable.gray);B36.setBackgroundResource(R.drawable.gray);B37.setBackgroundResource(R.drawable.gray);B38.setBackgroundResource(R.drawable.gray);B39.setBackgroundResource(R.drawable.gray);B40.setBackgroundResource(R.drawable.gray);
+                    B31.text="";B32.text="";B33.text="";B34.text="";B35.text="";B36.text="";B37.text="";B38.text="";B39.text="";B40.text="";
+                }
+
+                if(B51.text==""&&B52.text==""&&B53.text==""&&B54.text==""&&B55.text==""&&B56.text==""&&B57.text==""&&B58.text==""&&B59.text==""&&B60.text==""){
+
+                    B51.text=B41.text;B52.text=B42.text;B53.text=B43.text;B54.text=B44.text;B55.text=B45.text;
+                    B56.text=B46.text;B57.text=B47.text;B58.text=B48.text;B59.text=B49.text;B60.text=B50.text;
+                    B51.background=B41.background;B52.background=B42.background;B53.background=B43.background;
+                    B54.background=B44.background;B55.background=B45.background;B56.background=B46.background;
+                    B57.background=B47.background;B58.background=B48.background;B59.background=B49.background;B60.background=B50.background;
+                    B41.setBackgroundResource(R.drawable.gray);B42.setBackgroundResource(R.drawable.gray);B43.setBackgroundResource(R.drawable.gray);B44.setBackgroundResource(R.drawable.gray);B45.setBackgroundResource(R.drawable.gray);
+                    B46.setBackgroundResource(R.drawable.gray);B47.setBackgroundResource(R.drawable.gray);B48.setBackgroundResource(R.drawable.gray);B49.setBackgroundResource(R.drawable.gray);B50.setBackgroundResource(R.drawable.gray);
+                    B41.text="";B42.text="";B43.text="";B44.text="";B45.text="";B46.text="";B47.text="";B48.text="";B49.text="";B50.text="";
+
+                }
+                if(B61.text==""&&B62.text==""&&B63.text==""&&B64.text==""&&B65.text==""&&B66.text==""&&B67.text==""&&B68.text==""&&B69.text==""&&B70.text==""){
+                            B61.text=B51.text;B62.text=B52.text;B63.text=B53.text;B64.text=B54.text;B65.text=B55.text;
+                            B66.text=B56.text;B67.text=B57.text;B68.text=B58.text;B69.text=B59.text;B70.text=B60.text;
+                            B61.background=B51.background;B62.background=B52.background;B63.background=B53.background;B64.background=B54.background;B65.background=B55.background;
+                            B66.background=B56.background;B67.background=B57.background;B68.background=B58.background;B69.background=B59.background;B70.background=B60.background;
+                            B51.setBackgroundResource(R.drawable.gray);B52.setBackgroundResource(R.drawable.gray);B53.setBackgroundResource(R.drawable.gray);B54.setBackgroundResource(R.drawable.gray);B55.setBackgroundResource(R.drawable.gray);
+                            B56.setBackgroundResource(R.drawable.gray);B57.setBackgroundResource(R.drawable.gray);B58.setBackgroundResource(R.drawable.gray);B59.setBackgroundResource(R.drawable.gray);B60.setBackgroundResource(R.drawable.gray);
+                            B51.text="";B52.text="";B53.text="";B54.text="";B55.text="";B56.text="";B57.text="";B58.text="";B59.text="";B60.text="";
+
+
+            };lines=6}
+            if(lines==6){
+                if(B51.text==""&&B52.text==""&&B53.text==""&&B54.text==""&&B55.text==""&&B56.text==""&&B57.text==""&&B58.text==""&&B59.text==""&&B60.text==""){
+
+                B51.text=B41.text;B52.text=B42.text;B53.text=B43.text;B54.text=B44.text;B55.text=B45.text;
+                B56.text=B46.text;B57.text=B47.text;B58.text=B48.text;B59.text=B49.text;B60.text=B50.text;
+                B51.background=B41.background;B52.background=B42.background;B53.background=B43.background;
+                B54.background=B44.background;B55.background=B45.background;B56.background=B46.background;B57.background=B47.background;B58.background=B48.background;B59.background=B49.background;B60.background=B50.background;
+                B41.setBackgroundResource(R.drawable.gray);B42.setBackgroundResource(R.drawable.gray);B43.setBackgroundResource(R.drawable.gray);B44.setBackgroundResource(R.drawable.gray);B45.setBackgroundResource(R.drawable.gray);
+                B46.setBackgroundResource(R.drawable.gray);B47.setBackgroundResource(R.drawable.gray);B48.setBackgroundResource(R.drawable.gray);B49.setBackgroundResource(R.drawable.gray);B50.setBackgroundResource(R.drawable.gray);
+                B41.text="";B42.text="";B43.text="";B44.text="";B45.text="";B46.text="";B47.text="";B48.text="";B49.text="";B50.text="";
+
+            };lines=5}
+            if(lines==5){if(B41.text==""&&B42.text==""&&B43.text==""&&B44.text==""&&B45.text==""&&B46.text==""&&B47.text==""&&B48.text==""&&B49.text==""&&B50.text==""){
+                B41.text=B31.text;B42.text=B32.text;B43.text=B33.text;B44.text=B34.text;B45.text=B35.text;B46.text=B36.text;B47.text=B37.text;B48.text=B38.text;B49.text=B39.text;B50.text=B40.text;
+                B41.background=B31.background;B42.background=B32.background;B43.background=B33.background;B44.background=B34.background;B45.background=B35.background;B46.background=B36.background;B47.background=B37.background;B48.background=B38.background;B49.background=B39.background;B50.background=B40.background;
+                B31.setBackgroundResource(R.drawable.gray);B32.setBackgroundResource(R.drawable.gray);B33.setBackgroundResource(R.drawable.gray);B34.setBackgroundResource(R.drawable.gray);B35.setBackgroundResource(R.drawable.gray);B36.setBackgroundResource(R.drawable.gray);B37.setBackgroundResource(R.drawable.gray);B38.setBackgroundResource(R.drawable.gray);B39.setBackgroundResource(R.drawable.gray);B40.setBackgroundResource(R.drawable.gray);
+                B31.text="";B32.text="";B33.text="";B34.text="";B35.text="";B36.text="";B37.text="";B38.text="";B39.text="";B40.text="";
+            };lines=4}
+            if(lines==4){if(B31.text==""&&B32.text==""&&B33.text==""&&B34.text==""&&B35.text==""&&B36.text==""&&B37.text==""&&B38.text==""&&B39.text==""&&B40.text==""){
+                B31.text=B21.text;B32.text=B22.text;B33.text=B23.text;B34.text=B24.text;B35.text=B25.text;
+                B36.text=B26.text;B37.text=B27.text;B38.text=B28.text;B39.text=B29.text;B40.text=B30.text;
+                B31.background=B21.background;B32.background=B22.background;B33.background=B23.background;
+                B34.background=B24.background;B35.background=B25.background;B36.background=B26.background;
+                B37.background=B27.background;B38.background=B28.background;B39.background=B29.background;
+                B40.background=B30.background;
+                B21.setBackgroundResource(R.drawable.gray);B22.setBackgroundResource(R.drawable.gray);
+                B23.setBackgroundResource(R.drawable.gray);B24.setBackgroundResource(R.drawable.gray);
+                B25.setBackgroundResource(R.drawable.gray);B26.setBackgroundResource(R.drawable.gray);
+                B27.setBackgroundResource(R.drawable.gray);B28.setBackgroundResource(R.drawable.gray);
+                B29.setBackgroundResource(R.drawable.gray);B30.setBackgroundResource(R.drawable.gray);
+                B21.text="";B22.text="";B23.text="";B24.text="";B25.text="";B26.text="";B27.text="";B28.text="";B29.text="";B30.text="";
+                B31.setBackgroundResource(R.drawable.gray);B32.setBackgroundResource(R.drawable.gray);B33.setBackgroundResource(R.drawable.gray);B34.setBackgroundResource(R.drawable.gray);B35.setBackgroundResource(R.drawable.gray);
+                B36.setBackgroundResource(R.drawable.gray);B37.setBackgroundResource(R.drawable.gray);B38.setBackgroundResource(R.drawable.gray);B39.setBackgroundResource(R.drawable.gray);B40.setBackgroundResource(R.drawable.gray);
+                B31.text="";B32.text="";B33.text="";B34.text="";B35.text="";B36.text="";B37.text="";B38.text="";B39.text="";B40.text="";
+
+            }
+            lines=3;}
             if(lines==3){lines=2}
             if(lines==2){}
         },500)
@@ -244,7 +559,7 @@ class Game : AppCompatActivity() {
             b5.setBackgroundResource(R.drawable.gray);b6.setBackgroundResource(R.drawable.gray);b7.setBackgroundResource(R.drawable.gray);b8.setBackgroundResource(R.drawable.gray)
             b9.setBackgroundResource(R.drawable.gray);b10.setBackgroundResource(R.drawable.gray);b11.setBackgroundResource(R.drawable.gray);b12.setBackgroundResource(R.drawable.gray)
             b8.setBackgroundResource(R.drawable.yellow);b9.setBackgroundResource(R.drawable.yellow);b11.setBackgroundResource(R.drawable.yellow);b12.setBackgroundResource(R.drawable.yellow)
-            nextUp = 3
+            nextUp = 4
             once = 1
         }
         if(starting == 0){
@@ -262,16 +577,14 @@ class Game : AppCompatActivity() {
         }
         loseAline()
         if(stop == 0) {
-            var x=0;
-            var b=0;
-            var z=0;
-            var a=0;
+            x=0;
+            b=0;
+            z=0;
+            a=0;
 
 
 
-            if (B24.text == "0" || B25.text == "0" || B26.text == "0" || B27.text == "0") {
-                nextUp = 7
-            }
+            if (B24.text == "0" || B25.text == "0" || B26.text == "0" || B27.text == "0") {nextUp = 7 }
             array.removeAll(array);arrayCollectPreviousOne.removeAll(arrayCollectPreviousOne)
             shape_is = nextUp
             next_shape()
@@ -287,6 +600,9 @@ class Game : AppCompatActivity() {
             list()
         }else{}
     }
+
+
+
     val arrayCollectPreviousOne = arrayListOf<TextView>()
     val array = arrayListOf<TextView>()
     val downArray: ArrayList<TextView> get() = arrayListOf<TextView>(textView,B1,B2,B3,B4,B5,B6,B7,B8,
@@ -299,6 +615,7 @@ class Game : AppCompatActivity() {
         B142,B143,B144,B145,B146,B147,B148,B149,B150)
     var a = 0
     var b = 0
+    var c = 0
     var z = 0
     private fun list(){
         right.setOnClickListener{if(a == 0){
@@ -334,9 +651,9 @@ class Game : AppCompatActivity() {
                     else if(z==2){num1-=8;num2+=1;num3+=9;num4+=0;z=3};else{num1-=2;num2-=2;num3-=10;num4-=10;z=0}
                 }
                 5 -> { if(z==0){num1+=0;num2+=9;num3+=2;num4+=11;z=1};else{num1-=0;num2-=9;num3-=2;num4-=11;z=0}}
-                6 -> {if(z==0){num1+=0;num2+=1;num3+=1;num4+=9;z=1}else if(z == 1){num1+=9;num2+=0;num3+=0;num4+=0;z=2};
+                6 -> {if(z==0){num1+=0;num2+=1;num3+=1;num4+=9;z=1};else if(z == 1){num1+=9;num2+=0;num3+=0;num4+=0;z=2};
                 else if(z==2){num1-=9;num2-=1;num3-=1;num4+=0;z=3};else{num1+=0;num2+=0;num3+=0;num4-=9;z=0}}
-                7 -> {if(z==0){num1+=1;num2+=10;num3+=19;num4+=28;z=1}else{num1-=1;num2-=10;num3-=19;num4-=24;z=0}}
+                7 -> {if(z==0){num1+=1;num2+=10;num3+=19;num4+=28;z=1}else{num1-=1;num2-=10;num3-=19;num4-=28;z=0}}
             }
 
         } }
@@ -379,24 +696,25 @@ class Game : AppCompatActivity() {
          shapes()
      }
     private fun R_L() {
-        if (B1.text != "0") {
-            B1.setBackgroundResource(R.drawable.gray);if (B2.text != "0") {
+            if (B1.text != "0") {
+                B1.setBackgroundResource(R.drawable.gray);
+            if (B2.text != "0") {
                 B2.setBackgroundResource(R.drawable.gray)
-            };if (B3.text != "0") {
+            };if(B3.text != "0") {
                 B3.setBackgroundResource(R.drawable.gray)
-            };if (B4.text != "0") {
+            };if(B4.text != "0") {
                 B4.setBackgroundResource(R.drawable.gray)
-            };if (B5.text != "0") {
+            };if(B5.text != "0") {
                 B5.setBackgroundResource(R.drawable.gray)
-            };if (B6.text != "0") {
+            };if(B6.text != "0") {
                 B6.setBackgroundResource(R.drawable.gray)
-            };if (B7.text != "0") {
+            };if(B7.text != "0") {
                 B7.setBackgroundResource(R.drawable.gray)
-            };if (B8.text != "0") {
+            };if(B8.text != "0") {
                 B8.setBackgroundResource(R.drawable.gray)
-            };if (B9.text != "0") {
+            };if(B9.text != "0") {
                 B9.setBackgroundResource(R.drawable.gray)
-            };if (B10.text != "0") {
+            };if(B10.text != "0") {
                 B10.setBackgroundResource(R.drawable.gray)
             };
             if (B11.text != "0") {
@@ -698,7 +1016,7 @@ class Game : AppCompatActivity() {
     }
     var points = 0
     private fun landing(){
-        if(                    num1==141|| num1==142|| num1==143|| num1==144|| num1==145|| num1==146|| num1==147|| num1==148|| num1==149|| num1==150||
+        if(num1==141|| num1==142|| num1==143|| num1==144|| num1==145|| num1==146|| num1==147|| num1==148|| num1==149|| num1==150||
             num2==141|| num2==142|| num2==143|| num2==144|| num2==145|| num2==146|| num2==147|| num2==148|| num2==149|| num2==150||
             num3==141|| num3==142|| num3==143|| num3==144|| num3==145|| num3==146|| num3==147|| num3==148|| num3==149|| num3==150||
             num4==141|| num4==142|| num4==143|| num4==144|| num4==145|| num4==146|| num4==147|| num4==148|| num4==149|| num4==150){array[0].text="0";array[1].text="0";array[2].text="0";array[3].text="0"}
@@ -717,7 +1035,7 @@ class Game : AppCompatActivity() {
             1 -> {array[0].setBackgroundResource(R.drawable.red);array[1].setBackgroundResource(R.drawable.red);array[2].setBackgroundResource(R.drawable.red);array[3].setBackgroundResource(R.drawable.red);}
             2 -> {array[0].setBackgroundResource(R.drawable.orange);array[1].setBackgroundResource(R.drawable.orange);array[2].setBackgroundResource(R.drawable.orange);array[3].setBackgroundResource(R.drawable.orange);}
             3 -> {array[0].setBackgroundResource(R.drawable.yellow);array[1].setBackgroundResource(R.drawable.yellow);array[2].setBackgroundResource(R.drawable.yellow);array[3].setBackgroundResource(R.drawable.yellow);}
-            4 -> {array[0].setBackgroundResource(R.drawable.orange);array[1].setBackgroundResource(R.drawable.orange);array[2].setBackgroundResource(R.drawable.orange);array[3].setBackgroundResource(R.drawable.orange);}
+            4 -> {array[0].setBackgroundResource(R.drawable.green);array[1].setBackgroundResource(R.drawable.green);array[2].setBackgroundResource(R.drawable.green);array[3].setBackgroundResource(R.drawable.green);}
             5 -> {array[0].setBackgroundResource(R.drawable.blue);array[1].setBackgroundResource(R.drawable.blue);array[2].setBackgroundResource(R.drawable.blue);array[3].setBackgroundResource(R.drawable.blue);}
             6 -> {array[0].setBackgroundResource(R.drawable.purple);array[1].setBackgroundResource(R.drawable.purple);array[2].setBackgroundResource(R.drawable.purple);array[3].setBackgroundResource(R.drawable.purple);}
             7 -> {array[0].setBackgroundResource(R.drawable.pink);array[1].setBackgroundResource(R.drawable.pink);array[2].setBackgroundResource(R.drawable.pink);array[3].setBackgroundResource(R.drawable.pink);}
