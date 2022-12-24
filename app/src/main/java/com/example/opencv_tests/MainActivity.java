@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 
 import org.opencv.android.CameraActivity;
@@ -33,10 +35,15 @@ public class MainActivity extends CameraActivity {
 
     CameraBridgeViewBase cameraBridgeViewBase;
     CascadeClassifier cascadeClassifier;
-    CascadeClassifier cascadeClassifierER;
+    CascadeClassifier cascadeClassifierEYES;
+    CascadeClassifier cascadeClassifierMOUTH;
     CascadeClassifier cascadeClassifierEL;
+    CascadeClassifier cascadeClassifierER;
     Mat gray,rgb,transpose_gray,transpose_rgb;
     MatOfRect rects;
+    Integer MOUTHFLAGSIZE=0;
+    Integer RITHEYEFLAG=0;
+    Integer LEFTYEFLAG=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,6 +70,9 @@ public class MainActivity extends CameraActivity {
 
             @Override
             public Mat onCameraFrame(CameraBridgeViewBase.CvCameraViewFrame inputFrame) {
+                TextView T1TEXT = (TextView) findViewById(R.id.T1);
+                boolean CHECK_FLAG_MOUTH=true;
+                boolean CHECK_FLAG_EYES=true;
                 rgb = inputFrame.rgba();
                 gray = inputFrame.gray();
                 Core.flip(rgb, rgb, 1);
@@ -82,20 +92,92 @@ public class MainActivity extends CameraActivity {
                     Mat submat = transpose_rgb.submat(rect);
 
 //                    Imgproc.blur(submat,submat,new Size(10,10));
-                    Imgproc.putText(transpose_rgb, "Face", new Point(rect.x,rect.y-5), 1, 2, new Scalar(0,0,255));
-                    Imgproc.rectangle(transpose_rgb,rect,new Scalar(0,255,0),10);
-                    MatOfRect eyeR = new MatOfRect();
-                    cascadeClassifierER.detectMultiScale(gray,eyeR);
-                    MatOfRect eyeL = new MatOfRect();
-                    cascadeClassifierEL.detectMultiScale(gray,eyeL);
-                    for(Rect eR: eyeR.toList()){
-                        Imgproc.putText(transpose_rgb, "EYES Right", new Point(eR.x,eR.y-5), 1, 2, new Scalar(0,0,255));
-                        Imgproc.rectangle(transpose_rgb,eR,new Scalar(0,255,0),10);
+//                    Imgproc.putText(transpose_rgb, "Face", new Point(rect.x,rect.y-5),
+//                            1, 2, new Scalar(0,0,255));
+//                    Imgproc.rectangle(transpose_rgb,rect,new Scalar(0,255,0),10);
+                    MatOfRect mouth =new MatOfRect();
+                    Mat facepart = transpose_gray.submat(rect);
+                    cascadeClassifierMOUTH.detectMultiScale(facepart,mouth,1.5,25);
+                    Integer MOUTHSIZE = mouth.toList().size();
+
+
+
+                    if(MOUTHSIZE == 0){
+                        if(MOUTHFLAGSIZE==3){
+                            Log.e("OPENCV-TEST","MOUTHSIZE: "+MOUTHSIZE.toString());
+                            //T1TEXT.setText("MOUTH OPEN");
+                            setText(T1TEXT,"Mouth open");
+//                            Imgproc.putText(transpose_rgb, "*****"+MOUTHSIZE.toString(), new Point(100, 400)
+//                                    , 6, 10, new Scalar(0, 0, 0));
+                            MOUTHFLAGSIZE=0;
+
+                        }
+                        MOUTHFLAGSIZE+=1;
                     }
-                    for(Rect eL: eyeL.toList()){
-                        Imgproc.putText(transpose_rgb, "EYES left", new Point(eL.x,eL.y-5), 1, 2, new Scalar(0,0,255));
-                        Imgproc.rectangle(transpose_rgb,eL,new Scalar(0,255,0),10);
+                    if(MOUTHFLAGSIZE>3 ){
+                        MOUTHFLAGSIZE=0;
+                        RITHEYEFLAG=0;
                     }
+
+
+                    MatOfRect eyes = new MatOfRect();
+                    cascadeClassifierEYES.detectMultiScale(transpose_gray,eyes,
+                            1.3,25,0);
+                    if (eyes.toList().size()==2 &&  mouth.toList().size()>0 ){
+                        setText(T1TEXT,"");
+                    }
+
+
+
+                    for(Rect eYe: eyes.toList()){
+                        MatOfRect eyeL = new MatOfRect();
+                        MatOfRect eyeR = new MatOfRect();
+                        Mat eye_submat = transpose_gray.submat(eYe);
+
+
+                        cascadeClassifierEL.detectMultiScale(transpose_gray,eyeL,
+                                1.3,25,0);
+//                        cascadeClassifierER.detectMultiScale(eye_submat.t(),eyeR,
+//                                1.3,25,0);
+                        Integer AmountOfEyes = eyes.toList().size();
+                        Integer AmountOfLeftEye = eyeL.toList().size();
+                        Integer AmountOfRightEye = eyeR.toList().size();
+                        Log.e("OPENCV-TEST","RIGHT EYE: "+AmountOfRightEye.toString());
+                        Log.e("OPENCV-TEST","LEFT EYE: "+AmountOfLeftEye.toString());
+                        Log.e("OPENCV-TEST","EYES: "+AmountOfEyes.toString());
+                        if(AmountOfEyes==1 && AmountOfLeftEye==1) {
+                            ////RIGHT EYE CLOSED
+                            if (RITHEYEFLAG==3){
+                               // T1TEXT.setText("RIGTH EYE CLOSED");
+                                setText(T1TEXT,"RIGTH EYE CLOSED");
+//                                Imgproc.putText(transpose_rgb, "@@@@", new Point(eR.x, eR.y - 5)
+//                                        , 5, 5, new Scalar(0, 0, 255));
+                                RITHEYEFLAG=0;
+
+                            }
+                            RITHEYEFLAG+=1;
+
+                        }
+                        if(AmountOfEyes==1 && AmountOfLeftEye==0) {
+                            ////LEFT EYE CLOSED
+                            if (LEFTYEFLAG==1){
+
+                                setText(T1TEXT,"LEFT EYE CLOSED");
+//                                Imgproc.putText(transpose_rgb, "$$$$", new Point(eR.x, eR.y - 5)
+//                                        , 5, 5, new Scalar(0, 0, 255));
+                                RITHEYEFLAG=0;
+                                LEFTYEFLAG=0;
+                            }
+                            LEFTYEFLAG+=1;
+                        }
+                        if(LEFTYEFLAG>1){
+                            LEFTYEFLAG=0;
+                            RITHEYEFLAG=0;
+
+                        }
+                        Imgproc.rectangle(transpose_rgb,eYe,new Scalar(0,255,0),10);
+                    }
+
                     submat.release();
                 }
 
@@ -103,13 +185,18 @@ public class MainActivity extends CameraActivity {
                 return transpose_rgb.t();
             }
         }) ;
+
+        ////INIT OPENCV
         if (OpenCVLoader.initDebug()){
             cameraBridgeViewBase.enableView();
+//            cameraBridgeViewBase.disableView();
 
-
+//////////////////////////LOAD FRONT FACE CASCADE
             try{
-                InputStream inputStream = getResources().openRawResource(R.raw.lbpcascade_frontalface);
-                File file =new File(getDir("cascade",MODE_PRIVATE),"lbpcascade_frontalface.xml");
+                InputStream inputStream = getResources()
+                        .openRawResource(R.raw.lbpcascade_frontalface);
+                File file =new File(getDir("cascade",MODE_PRIVATE),
+                        "lbpcascade_frontalface.xml");
 
                 FileOutputStream fileOutputStream=new FileOutputStream(file);
 
@@ -119,31 +206,32 @@ public class MainActivity extends CameraActivity {
                 while((read_bytes = inputStream.read(data)) != -1){
                     fileOutputStream.write(data,0,read_bytes);
                 }
-//
-//                cascadeClassifier =new CascadeClassifier(file.getAbsolutePath());
-//                if(cascadeClassifier.empty()) cascadeClassifier = null;
+
                 inputStream.close();
                 fileOutputStream.close();
-                //////////////////////////////////////////////////////
-                InputStream inputStreamER = getResources().openRawResource(R.raw.haarcascade_righteye_2splits);
-                File fileER =new File(getDir("cascadeER",MODE_PRIVATE),"haarcascade_righteye_2splits.xml");
+                ///////////////////////////////////////////////////////////////////////////////////
+                ////LOAD EYES CASCADE
+                InputStream inputStreamEYE = getResources().openRawResource(R.raw.haarcascade_eye);
+                File fileEYE =new File(getDir("cascadeEYE",
+                        MODE_PRIVATE),"haarcascade_eye.xml");
 
-                FileOutputStream fileOutputStreamER=new FileOutputStream(fileER);
+                FileOutputStream fileOutputStreamEYE=new FileOutputStream(fileEYE);
 
-                byte[] dataER = new byte[4096];
-                int read_bytesER;
+                byte[] dataEYE = new byte[4096];
+                int read_bytesEYE;
 
-                while((read_bytesER = inputStreamER.read(dataER)) != -1){
-                    fileOutputStreamER.write(dataER,0,read_bytesER);
+                while((read_bytesEYE = inputStreamEYE.read(dataEYE)) != -1){
+                    fileOutputStreamEYE.write(dataEYE,0,read_bytesEYE);
                 }
 
-
-                inputStreamER.close();
-                fileOutputStreamER.close();
-//////////////////////////////////////////////////////////////////////////////////////////////////////
-
-                InputStream inputStreamEL = getResources().openRawResource(R.raw.haarcascade_lefteye_2splits);
-                File fileEL =new File(getDir("cascadeEL",MODE_PRIVATE),"haarcascade_lefteye_2splits.xml");
+                inputStreamEYE.close();
+                fileOutputStreamEYE.close();
+///////////////////////////////////////////////////////////////////////////////////////////////////
+                ////LOAD LEFT EYE CASCADE
+                InputStream inputStreamEL = getResources().
+                        openRawResource(R.raw.haarcascade_lefteye_2splits);
+                File fileEL =new File(getDir("cascadeEL",MODE_PRIVATE),
+                        "haarcascade_lefteye_2splits.xml");
 
                 FileOutputStream fileOutputStreamEL=new FileOutputStream(fileEL);
 
@@ -154,18 +242,61 @@ public class MainActivity extends CameraActivity {
                     fileOutputStreamEL.write(dataEL,0,read_bytesEL);
                 }
 
-
                 inputStreamEL.close();
                 fileOutputStreamEL.close();
+///////////////////////////////////////////////////////////////////////////////////////////////////
+                ////LOAD LEFT EYE CASCADE
+                InputStream inputStreamER = getResources().
+                        openRawResource(R.raw.haarcascade_righteye_2splits);
+                File fileER =new File(getDir("cascadeER",MODE_PRIVATE),
+                        "haarcascade_righteye_2splits.xml");
 
+                FileOutputStream fileOutputStreamER=new FileOutputStream(fileER);
+
+                byte[] dataER = new byte[4096];
+                int read_bytesER;
+
+                while((read_bytesER = inputStreamER.read(dataER)) != -1){
+                    fileOutputStreamER.write(dataER,0,read_bytesER);
+                }
+
+                inputStreamER.close();
+                fileOutputStreamER.close();
+///////////////////////////////////////////////////////////////////////////////////////////////////
+                ////LOAD MOUTH CASCADE
+                InputStream inputStreamMOUTH = getResources().
+                        openRawResource(R.raw.haarcascade_smile);
+                File fileMOUTH =new File(getDir("cascadeMOUTH",MODE_PRIVATE),
+                        "haarcascade_smile.xml");
+
+                FileOutputStream fileOutputStreamMOUTH=new FileOutputStream(fileMOUTH);
+
+                byte[] dataMOUTH = new byte[4096];
+                int read_bytesMOUTH;
+
+                while((read_bytesMOUTH = inputStreamMOUTH.read(dataMOUTH)) != -1){
+                    fileOutputStreamMOUTH.write(dataMOUTH,0,read_bytesMOUTH);
+                }
+
+
+                inputStreamMOUTH.close();
+                fileOutputStreamMOUTH.close();
+                ///////////////////////////////////////////////////////////////////////////////////
 
                 cascadeClassifier =new CascadeClassifier(file.getAbsolutePath());
+                cascadeClassifierEYES =new CascadeClassifier(fileEYE.getAbsolutePath());
+                cascadeClassifierEL =new CascadeClassifier(fileEL.getAbsolutePath());
+                cascadeClassifierMOUTH =new CascadeClassifier(fileMOUTH.getAbsolutePath());
                 cascadeClassifierER =new CascadeClassifier(fileER.getAbsolutePath());
-                cascadeClassifierEL =new CascadeClassifier(file.getAbsolutePath());
-                if(cascadeClassifier.empty()||cascadeClassifierER.empty()) {
+
+                if(cascadeClassifier.empty()||cascadeClassifierEYES.empty()||
+                        cascadeClassifierEL.empty() || cascadeClassifierMOUTH.empty()
+                        ||cascadeClassifierER.empty()) {
                     cascadeClassifier = null;
-                    cascadeClassifierER = null;
+                    cascadeClassifierEYES = null;
                     cascadeClassifierEL = null;
+                    cascadeClassifierMOUTH = null;
+                    cascadeClassifierER = null;
                 }
 
 
@@ -173,6 +304,8 @@ public class MainActivity extends CameraActivity {
 
 
 ////////////////////////////////////////////////////////////////////////
+                fileMOUTH.delete();
+                fileEYE.delete();
                 fileER.delete();
                 fileEL.delete();
                 file.delete();
@@ -229,4 +362,16 @@ public class MainActivity extends CameraActivity {
         Core.flip(rotated, rotated, 1);
         return rotated;
     }
+
+
+    private void setText(final TextView text,final String value){
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                text.setText(value);
+            }
+        });
+    }
+
+
 }
