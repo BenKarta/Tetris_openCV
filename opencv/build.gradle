@@ -92,6 +92,7 @@
 plugins{
     id 'org.jetbrains.kotlin.android' version '1.7.10'
 }
+
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
@@ -101,11 +102,11 @@ def openCVersionCode = ((4 * 100 + 6) * 100 + 0) * 10 + 0
 println "OpenCV: " +openCVersionName + " " + project.buildscript.sourceFile
 
 android {
-    compileSdkVersion 32
+    compileSdkVersion 30
 
     defaultConfig {
-        minSdkVersion 31
-        targetSdkVersion 32
+        minSdkVersion 29
+        targetSdkVersion 30
 
         versionCode openCVersionCode
         versionName openCVersionName

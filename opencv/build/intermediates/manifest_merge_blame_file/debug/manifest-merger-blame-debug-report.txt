@@ -3,9 +3,9 @@
 3    package="org.opencv" >
 4
 5    <uses-sdk
-6        android:minSdkVersion="31"
-6-->C:\Users\benrt\AndroidStudioProjects\opencvtests\opencv\java\AndroidManifest.xml
-7        android:targetSdkVersion="32" />
-7-->C:\Users\benrt\AndroidStudioProjects\opencvtests\opencv\java\AndroidManifest.xml
+6        android:minSdkVersion="29"
+6-->C:\Users\benrt\tetris-java\tetris\openCV\java\AndroidManifest.xml
+7        android:targetSdkVersion="30" />
+7-->C:\Users\benrt\tetris-java\tetris\openCV\java\AndroidManifest.xml
 8
 9</manifest>
