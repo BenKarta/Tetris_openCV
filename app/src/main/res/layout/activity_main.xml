@@ -4,7 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     tools:context="com.tetris.tetris.MainActivity">
+=======
+    android:background="#B6B6B6">
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="407dp"
+        android:layout_height="692dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="592dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+>>>>>>> 53ed463992faff4e79a8540c5cf07f51f20d162d
 
     <Button
         android:id="@+id/play"
@@ -16,4 +34,34 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+<<<<<<< HEAD
+=======
+        <TextView
+            android:id="@+id/T1"
+            android:layout_width="287dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="120dp"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:visibility="visible"
+            app:layout_anchorGravity="bottom|center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Tetris"
+            tools:visibility="visible" />
+
+        <org.opencv.android.JavaCameraView
+            android:id="@+id/cameraView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+             />
+
+
+    </GridLayout>
+
+>>>>>>> 53ed463992faff4e79a8540c5cf07f51f20d162d
 </androidx.constraintlayout.widget.ConstraintLayout>
